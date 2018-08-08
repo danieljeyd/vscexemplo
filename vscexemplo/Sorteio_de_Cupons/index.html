@@ -6,13 +6,25 @@
     <title>Jey D Collection</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script> 
     <div align= "center">
         <h1 style="color: royalblue">Jey D Collection</h1>
         <img src="Paisagem.jpg" alt="Paisagem vista da praia" width="1280" height="400">
-        <p>Clique no botão abaixo para sortear um cupom de desconto.</p>
-        <button onclick="myFunction()">Sortear</button>
-      
+        <p></p>
+        <script>
+            $(document).ready(function(){
+                $("#hide").click(function(){
+                    $("p1").hide();
+                    $("#hide").hide();
+                });              
+            });
+            </script>
+        
+        <p1>Clique no botão abaixo para sortear um cupom de desconto.</p1>
+        <P></P>
+        <button id="hide" onclick="myFunction()">Sortear</button>
+                
         <p id="demo"></p>
     </div>
 </head>
