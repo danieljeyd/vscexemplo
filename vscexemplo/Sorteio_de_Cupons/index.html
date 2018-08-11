@@ -1,5 +1,6 @@
-<Docktype <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,36 +8,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="script.js"></script> 
-    <div align= "center">
+    <script src="script.js"></script>
+    <link href="ContatoEstilo.css" rel="stylesheet" media="all" />
+    <script src="JavaScript1.js"></script>
+
+
+    <div align="center">
         <h1 style="color: royalblue">Jey D Collection</h1>
+</head>
+
+<body>
+    <div>
+
+
         <img src="Paisagem.jpg" alt="Paisagem vista da praia" width="1280" height="400">
         <p></p>
         <script>
-            $(document).ready(function(){
-                $("#hide").click(function(){
+            $(document).ready(function () {
+                $("#hide").click(function () {
                     $("p1").hide();
                     $("#hide").hide();
-                });              
+                    $(formulario).show();
+
+                });
             });
-            </script>
-        
+        </script>
+
         <p1>Clique no botão abaixo para sortear um cupom de desconto.</p1>
         <P></P>
         <button id="hide" onclick="myFunction()">Sortear</button>
-                
+
         <p id="demo"></p>
 
-        <select id="myselect" onchange="change_myselect(this.value)">
-            <option value="">Escolha uma opção de conta:</option>
-            <option value="email">Email</option>
-            <option value="instagram">Instagram</option>
-        </select>
 
+        <!-- Ocultar formulario-->
+        <script>
+            function trocar(obj) {
+                if (obj.style.display == "none") {
+                    obj.style.display = "block";
+                } else {
+                    obj.style.display = "none";
+                }
+            }
 
-    </div>
-</head>
-<body>
-    
+        </script>
+        <a href="javascript:void(0);" onclick="return trocar(formulario);">Formulário</a>
+        <br />
+        <br />
+        <div id="formulario" style="display:none">
+
+            <!-- Formulario-->
+
+            <form name="formulario">
+
+                <h1> Entre em contato </h1>
+
+                <p class="nome">
+                    <input style="width:300px" type="text" id="nomeid" placeholder=" Daniel Andrade " required="required" name="nome" />
+                    <label for="nome">Nome</label>
+                </p>
+                <p class="phone">
+                    <input style="width:300px" type="text" id="phoneid" placeholder="(xx)xxxxx-xxxx" name="phone" />
+                    <label for="phone">Phone</label>
+
+                </p>
+                <p>
+                    <input style="width:300px" type="email" id="emailid" placeholder="nome@mail.com" name="email" />
+                    <label for="email">Email</label>
+                </p>
+                <p>
+                    <textarea type="text" id="textoid" placeholder="Deixe sua opnião"></textarea>
+                </p>
+                <button id ="botaoEnviar"onclick="salvar()">Enviar</button>
+
+            </form>
+            <!-- Formulario
+
+            <iframe id="conteudo" style="display: none"></iframe>
+                 -->
+
 </body>
+
 </html>
