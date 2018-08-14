@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
     <link href="ContatoEstilo.css" rel="stylesheet" media="all" />
-     <script src="JavaScript1.js"></script> 
+    <!--   <script src="JavaScript1.js"></script> -->
 
 
     <div align="center">
@@ -87,7 +87,35 @@
                 }
             }
 
-              
+            function myFunction() {
+                var x = Math.floor((Math.random() * 10) + 1);
+                var greeting;
+
+                alert("clique ok para concluir sorteio");
+
+                if (x == 2) {
+
+                    greeting = "Parabéns você ganhou cupom de 10% codigo: #desonto10";
+
+                }
+                else {
+                    greeting = " Infelizmente não foi desta vez, quer tentar novamente preencha os campos"
+
+                }
+
+                document.getElementById("demo").innerHTML = greeting;
+
+            }
+
+            function salvar() {
+                // função  esconder botão sorteio.
+                $(document).ready(function () {
+                    $("#hide").click(function () {
+
+                        $(hide).show();
+
+                    });
+                });
 
         </script>
     </div>
