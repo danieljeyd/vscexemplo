@@ -72,7 +72,14 @@
         <p1>Clique no botão abaixo para sortear um cupom de desconto.</p1>
         <P></P>
         <button id="hide" onclick="myFunction()">Sortear</button>
+        <style>
+            p {
+                font: 200;
+                color: blue;
 
+            }
+        </style>
+        <br/>
         <p id="demo"></p>
 
     </div>
@@ -99,7 +106,7 @@
 
                 }
                 else {
-                    greeting = " Infelizmente não foi desta vez, quer tentar novamente preencha os campos"
+                    greeting = " Infelizmente não foi desta vez, quer tentar novamente preencha os campos abaixo"
 
                 }
 
@@ -122,13 +129,11 @@
     <div align="center">
 
         <div id="formulario" style="display:none">
-                <a href="javascript:void(0);" onclick="return trocar(formulario);"></a>
-        <br/>
-        <br />
+            <a href="javascript:void(0);" onclick="return trocar(formulario);"></a>
+            <br/>
 
+            <!-- Formulario -->
 
-        <!-- Formulario -->
-        
             <form name="formulario">
 
                 <h1> Entre em contato </h1>
@@ -159,7 +164,7 @@
             </form>
 
 
-            
+
 
 
         </div>
