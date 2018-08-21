@@ -101,12 +101,12 @@
 
         <!-- Formulario -->
         
-            <form name="formulario">
+            <form name="formulario" action= "cadastro.php" method="POST">
 
                 <h1> Entre em contato </h1>
 
                 <p class="nome">
-                    <input style="width:300px" type="text" id="nomeid" placeholder=" Daniel Andrade " required="required" name="nome" />
+                    <input style="width:300px" type="text" id="nomeid" placeholder=" Daniel Andrade " required="required" name="nomeCliente" />
                     <label for="nome">Nome</label>
                 </p>
 
@@ -121,12 +121,10 @@
                 </p>
 
                 <p class="texto">
-                    <textarea type="text" id="textoid" placeholder="Deixe sua opnião"></textarea>
+                    <textarea type="text" id="textoid" placeholder="Deixe sua opnião" name="texto "></textarea>
                 </p>
 
-
-
-                <button id="botaoEnviar" onclick="salvar()">Enviar</button>
+                <input type="submit" name="Enviar" onclick="salvar()">
 
             </form>
 
