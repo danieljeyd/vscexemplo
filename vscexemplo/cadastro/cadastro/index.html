@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="scripts.js"></script>
+
+    <title>Iniciar</title>
+</head>
+
+<body>
+
+
+    <div align="center">
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+                $("#sorte").hide();
+            });
+
+
+            function slide1() {
+                document.getElementById('slide').src = "foto.jpg";
+                setTimeout("slide2()", 3000)
+            }
+
+            function slide2() {
+                document.getElementById('slide').src = "foto2.jpg";
+                setTimeout("slide3()", 3000)
+            }
+
+            function slide3() {
+                document.getElementById('slide').src = "foto3.jpg";
+                setTimeout("slide1()", 3000)
+            }
+
+        </script>
+
+        <body onLoad="slide1()">
+            <img id="slide" alt="Montanhas" width="1280" height="400">
+        </body>
+
+        <p>
+            <form name="formulario" action="connect.php" method="POST">
+                <div>
+                    <br>
+                    <h1> Entre com o Token de acesso </h1>
+
+                    <p class="Nome">
+                        <input style="width:300px" type="text" id="nomeid" placeholder="" required="required" name="nomeCliente" />
+                        <label for="nome">Nome</label>
+                    </p>
+
+                    <p class="token">
+                        <input style="width:300px" type="text" id="idtoken" placeholder=" xxxx-xxxx-xxxx-xxxxx-xxxx-xxxx-xxxx-xxxx-xxxx" name="token"
+                        />
+                        <label for="token">Token</label>
+                    </p>
+                    <p classs botao>
+
+                        <p class "botao">
+                            <input type="submit" value="Acessar" id="botaid" name="Enviar" />
+                        </p>
+                        <br>
+                </div>
+            </form>
+
+            <p id="demo"></p>
+            </p>
+
+
+
+</body>
+
+</html>
