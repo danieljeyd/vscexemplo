@@ -4,7 +4,7 @@ $telefone = $_POST['phone'];
 $email = $_POST['email'];
 $observacao = $_POST['textoCliente'];
 
-$strcon = mysqli_connect('localhost', 'root', '1234','jeyd') or die ('Erro ao conexão');
+$strcon = mysqli_connect('localhost', 'daniel', '1234galo','jeyd') or die ('Erro ao conexão');
 $sql = "INSERT INTO cadastro VALUES ";
 echo "Cliente cadastrado com sucesso!";
 $sql .= "('$nomeCliente', '$telefone', '$email', '$observacao')";

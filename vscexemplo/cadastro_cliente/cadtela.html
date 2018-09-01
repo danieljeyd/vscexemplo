@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cadastro Cliente</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+
+    <!-- Formulario -->
+
+    <form name="formulario" action="cadastro.php" method="POST">
+        <div>
+            <h1> Cadastro de Clientes </h1>
+
+            <p class="nome">
+                <input style="width:300px" type="text" id="nomeid" placeholder="" required="required" name="nomeCliente" />
+                <label for="nome">Nome</label>
+            </p>
+
+            <p class="phone">
+                <input style="width:300px" type="text" id="phoneid" placeholder="(xx) xxxxx-xxxx" name="phone" />
+                <label for="phone">Phone</label>
+            </p>
+
+            <p class "email">
+                <input style="width:300px" type="email" id="emailid" placeholder="nome@mail.com" name="email" />
+                <label for="email">Email</label>
+            </p>
+        </div>
+         <div>
+            <!-- Inicio do formulario do endereço -->
+            <form method="get" action=".">
+                 <h2>Endereço:</h2>
+                <p>
+                    <label>CEP:
+                        <input name="cep" method="get" action="." type="text" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);"
+                        /></label><br />
+                </p>
+
+                <label>Rua:
+                    <input name="rua" type="text" id="rua" size="40" /></label><br />
+                <p>
+
+                    <label>Bairro:
+                        <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+                </p>
+                <p>
+                    <label>Cidade:
+                        <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+
+                </p>
+                <p>
+                    <label>Estado:
+                        <input name="uf" type="text" id="uf" size="10" /></label><br />
+
+                </p>
+                <p>
+                    <label>IBGE:
+                        <input name="ibge" type="text" id="ibge" size="10" /></label><br />
+
+                </p>
+                <p class "botao">
+                    <input type="submit" value="Enviar" id="botaid"  name="Enviar" />
+                </p>
+            </form>
+
+        </div>
+
+</form>
+
+
+
+</body>
+
+</html>
