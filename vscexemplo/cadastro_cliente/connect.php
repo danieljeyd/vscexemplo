@@ -1,10 +1,6 @@
 <?php
-$host = 'localhost';
-$user = 'daniel';
-$pass =  '1234galo';
-$db = 'jeyd';
-
 $EntradaToken = $_POST['token'];
+echo "<script > location.href='cadtela.html'; </script>";
 
 echo "<br> Token invalido!";
 
@@ -12,10 +8,10 @@ echo "<table border=2>";
 echo "<tr>";
 echo "<th>Token</th>";
 echo "</tr>";
-
+echo "<script > location.href='cadtela.html'; </script>";
 
 // conecta ao banco de dados
-$strcon = mysqli_connect($host, $user, $pass, $db)or die (" <br> Erro ao tentar conectar Banco! ");
+$strcon = mysqli_connect('localhost', 'daniel', '1234galo', 'jeyd') or die (" <br> Erro ao tentar conectar Banco! ");
 
 //else{
 //echo "<br>Conectou certinho!" passa para tela de cadastro;
