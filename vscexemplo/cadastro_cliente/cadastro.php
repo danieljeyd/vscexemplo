@@ -30,6 +30,6 @@ mysqli_query( $strcon, $sql ) or die (" Erro ao tentar cadastrar registro");
 mysqli_close($strcon);
 
 
-echo "<script > location.href='cadtela.html'; </script>";
+//echo "<script > location.href='index.html'; </script>";
 
 ?>

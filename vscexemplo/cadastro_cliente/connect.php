@@ -1,37 +1,58 @@
 <?php
+$host = 'localhost';
+$user = 'daniel';
+$pass =  '1234galo';
+$db = 'jeyd';
+
+$EntradaToken = $_POST['token'];
+
+echo "<br> Token invalido!";
+
+echo "<table border=2>";
+echo "<tr>";
+echo "<th>Token</th>";
+echo "</tr>";
 
 
-$nomeCliente = $_POST['nomeCliente'];
-$token = $_POST['token'];
+// conecta ao banco de dados
+$strcon = mysqli_connect($host, $user, $pass, $db)or die (" <br> Erro ao tentar conectar Banco! ");
 
-$strcon = mysqli_connect('localhost', 'daniel', '1234galo','jeyd')or die ('Erro ao conexão');
+//else{
+//echo "<br>Conectou certinho!" passa para tela de cadastro;
+// echo "<script > location.href='cadtela.html'; </script>";
+//}
+$sql = "SELECT nomeCliente, token FROM tokens WHERE token = $EntradaToken";
+$resultado = mysqli_query($strcon, $sql)or die (" <br> Erro ao tentar consultar dados no Banco! ");
+// token para teste: 1234
+// Obtendo dados atraves do loop while;
 
-if($strcon){
-   // echo "conectou ao banco de dados";
+while($registro = mysqli_fetch_array($resultado))
+{
 
-  echo "<script > location.href='cadtela.html'; </script>";
-    
-    
-    //echo '</script>';
-    $Consulta = mysql_num_rows(mysql_query("SELECT nomeCliente,token FROM tokens WHERE nomeCliente= '$nomeCliente', token= '$token' "));
-    if ($Consulta != 0) {
+$token = $registro['token'];
 
-       // echo "conectou ao banco de dados";
-
-       echo "<script > location.href='cadtela.html'; </script>";
-        
-       
-    }else
-    {
-        echo " token invalido";
-        
-    }
-
+If($token==null){
+    echo "Token invalido";
 }
-
 else{
-    echo "não conectou ao banco de dados";
+
+echo "<tr>";
+echo "<th>".$token."</th>";
+echo "</tr>";
+
+
+echo '<script language="javascript">';
+echo 'alert(" token enviado com sucesso!")';
+echo '</script>';
+echo "<script > location.href='cadtela.html'; </script>";
+
+
 }
 
+} 
+mysqli_close($strcon);
+echo "</table>";
 
 ?>
+
+
